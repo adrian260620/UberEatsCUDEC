@@ -1,5 +1,10 @@
 db.collection("platillos").onSnapshot((coleccion) => {
-coleccion.forEach((registro) => {
-mostrarplatillo(registro.data(), registro.id);
+coleccion.docChanges().forEach((registro) => {
+    if (registro.type === "added"){
+mostrarplatillo(registro.doc.data(), registro.doc.id);
+    }
+    if (registro.type === "modified"){
+        actualizarplatillo(registro.doc.data(), registro.doc.id);
+    }
 });
 });
