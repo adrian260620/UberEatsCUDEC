@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function mostrarplatillo(platillo, id) {
   contenido = `
-  <div class='card-pannel recipe white row' data-id='${id}'>
+  <div class='card-pannel recipe white row' id='${id}' data-id='${id}'>
   <div class='recipe-details'>
     <div class='recipe-tittle'>
       ${platillo.nombre}
@@ -40,3 +40,16 @@ function actualizarplatillo(platillo, id) {
   tarjeta.querySelector(",recipe.ingredients").innerHTML = platillo.ingredientes;
   tarjeta.querySelector(",recipe.price").innerHTML = platillo.precio;
 }
+const borrarPlatillo = (id) => {
+  const confirmar = confirm("¿Estas seguro que quieres borrar este platillo?");
+  if(!confirmar){
+    return;
+  }
+  const recipe = document.querySelector(`.recipe[data-id=${id}]`);
+  platillo.remove();
+
+  db.collection("platillos").doc(id)
+  .delete()
+  .then(() => console.log("Platillo eliminado"))
+  .catch((error) => console.log(error));
+};
