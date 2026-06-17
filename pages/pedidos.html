@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Food Ninja</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="/">Food<span>Ninja</span></a>
+      <span class="right grey-text text-darken-1">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">FOODNINJA</a></li>
+    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="/pages/contact.html" class="waves-effect">
+      <i class="material-icons">mail_outline</i>Contact</a>
+    </li>
+  </ul>
+
+  <div class="container grey-text">
+<h5 class="center">Pedidos</h5>
+<title>Formulario</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+    }
+
+    .formulario {
+        width: 500px;
+    }
+
+    .fila {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: inline-block;
+        width: 100px;
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        width: 250px;
+        padding: 5px;
+    }
+
+    textarea {
+        width: 350px;
+        height: 80px;
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    .botones {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 8px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="formulario">
+    <div class="input-field">
+        <select id="listaPlatillos" type="text">
+            <option value="" disabled selected>Selecciona un platillo</option>
+        </select>
+        <label for="platillo">Platillo</label>
+    </div>
+
+    <div class="fila">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+    </div>
+
+    <div class="fila">
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion"></textarea>
+    </div>
+
+    <div class="botones">
+        <button type="button">Cancelar</button>
+        <button type="submit">Guardar</button>
+    </div>
+</div>
+</div>
+
+
+<script src="/js/index.js"></script>
+<script src="/js/db.js"></script>
+</body>
+</html>
+
