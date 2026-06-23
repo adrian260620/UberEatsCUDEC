@@ -53,10 +53,3 @@ const borrarPlatillo = (id) => {
   .then(() => console.log("Platillo eliminado"))
   .catch((error) => console.log(error));
 };
-
-function agregarAlista(platillo, id) {
-  contenidoLista = `
-  <option value="${id}">" ${platillo.nombre} ${platillo.precio}</option>
-  `;
-  document.getElementById("listaPlatillos").innerHTML += contenidoLista;
-}
