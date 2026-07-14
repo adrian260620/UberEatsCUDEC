@@ -86,3 +86,48 @@ const borrarPlatillo = (id) => {
     }
 
 };
+
+let  streaming = false;
+const width = 320;
+let height = 0;
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const foto = document.getElementById('foto');
+const btnFoto = document.getElementById('btn-foto');
+
+btnFoto.addEventListener('click', function() {
+   navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: false
+   })
+   .then((stream) => {
+    video.srcObject = stream;
+    video.play();
+   })
+   .catch((error) => {
+    console.log(error);
+   });
+})
+
+video.addEventListener("canplay", () => {
+    if (!streaming) {
+        height = video.videoHeight / (video.videoWidth / width);
+        video.setAttribute("width", width);
+        video.setAttribute("height", height);
+        streaming = true
+    }
+})
+
+function tomarFoto() {
+    const contexto = canvas.getContext("2d");
+    if (width && height){
+        canvas.width = width;
+        canvas.height = height;
+        contexto.drawImage(video, 0, 0, width, height);
+        const fotoFinal = canvas.toDataURL("image/png");
+        foto.setAttribute("src", fotoFinal);
+    }
+    else{
+        limpiarFoto();
+    }
+}
