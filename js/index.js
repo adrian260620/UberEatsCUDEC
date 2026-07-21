@@ -15,9 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Mostrar platillo
 function mostrarplatillo(platillo, id) {
-
+    let fotoplatillo;
+    if (platillo.foto){
+        fotoplatillo = "data:image/png:base64, " +platillo.foto;
+    }
+    else {
+        fotoplatillo = "img/no-image.png";
+    }
     contenido = `
     <div class="card-panel recipe white row" id="${id}" data-id="${id}">
+    <img src="data:image/png:base64,  ${platillo.foto}" height="100px" width="100px">
         
         <div class="recipe-details">
 
@@ -126,6 +133,7 @@ function tomarFoto() {
         contexto.drawImage(video, 0, 0, width, height);
         const fotoFinal = canvas.toDataURL("image/png");
         foto.setAttribute("src", fotoFinal);
+        document.getElementById("foto").value = fotoFinal;
     }
     else{
         limpiarFoto();

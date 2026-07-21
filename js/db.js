@@ -31,6 +31,7 @@ formularioAgregar.addEventListener("submit", (e) => {
         ingredientes: formularioAgregar.ingredients.value,
         nombre: formularioAgregar.title.value,
         precio: formularioAgregar.price.value
+        
     };
 
 
