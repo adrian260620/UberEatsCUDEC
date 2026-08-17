@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Ninja - Acerca de Nosotros</title>
+  <title>Food Ninja - Contacto</title>
   
   <!-- Materialize CSS & Iconos -->
   <link type="text/css" href="../css/materialize.min.css" rel="stylesheet">
@@ -53,10 +53,10 @@
 <body class="grey lighten-4">
 
   <!-- Barra de navegación superior -->
-  <nav class="z-depth-0 teal darken-3">
+  <nav class="z-depth-0">
     <div class="nav-wrapper container">
-      <a href="/" class="brand-logo">Food<span style="color:#ffcc00;">Ninja</span></a>
-      <span class="right grey-text text-lighten-4">
+      <a href="/">Food<span>Ninja</span></a>
+      <span class="right grey-text text-darken-1">
         <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
       </span>
     </div>
@@ -76,20 +76,29 @@
 
   <!-- Contenido principal -->
   <div class="container grey-text">
-    <h5 class="center">Acerca de Nosotros</h5>
+    <h5 class="center">Contáctanos</h5>
     <p>
-      En <strong>Food Ninja</strong> creemos que la comida no es solo un platillo, ¡es una experiencia!  
-      Nuestra misión es conectar a las personas con sus restaurantes favoritos y entregar alegría en cada pedido.  
-      Rápido, confiable y con los platillos más deliciosos directo a tu puerta.
+      ¿Tienes dudas, comentarios o sugerencias?  
+      En <strong>Food Ninja</strong> queremos escucharte.  
+      Escríbenos y nuestro equipo te responderá lo más pronto posible.
     </p>
     <div class="divider"></div>
-    <h6>Nuestra dirección:</h6>
+    <h6>Encuéntranos en:</h6>
     <ul>
-      <li>123 Spicy Noodle Road</li>
-      <li>Manchester, UK</li>
+      <li>Instagram como @foodninja</li>
+      <li>X como @foodninja</li>
+      <li>Facebook como Food Ninja</li>
+      <li>Correo electrónico: aemp030409@gmail.com
     </ul>
   </div>
 
+  <!-- Script para inicializar el menú lateral -->
   <script src="../js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menus = document.querySelectorAll('.side-menu');
+      M.Sidenav.init(menus, {edge: 'right'});
+    });
+  </script>
 </body>
 </html>

@@ -59,15 +59,19 @@ const fotoImg = document.getElementById('fotoImg');   // <img id="fotoImg">
 const fotoInput = document.getElementById('fotoInput'); // <input id="fotoInput" type="hidden">
 const btnFoto = document.getElementById('btn-foto');
 
-// Iniciar cámara
+// Iniciar cámara (forzar trasera)
 btnFoto.addEventListener('click', function() {
-   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+   navigator.mediaDevices.getUserMedia({ 
+      video: { facingMode: { exact: "environment" } }, // 🔧 Cámara trasera
+      audio: false 
+   })
    .then((stream) => {
       video.srcObject = stream;
       video.play();
    })
    .catch((error) => {
-      console.log(error);
+      console.log("Error al acceder a la cámara trasera:", error);
+      alert("No se pudo abrir la cámara trasera.");
    });
 });
 
