@@ -17,14 +17,14 @@ Los usuarios pueden gestionar sus pedidos de manera rápida y sencilla.
 Aplicación progresiva que simula un sistema de pedidos de comida, con integración de cámara y almacenamiento en Firebase Firestore.
 
 ## Materia / Carrera / Alumno
-- Materia: **Programación avanza III**  
+- Materia: **Programación avanzada III**  
 - Carrera: **Ingeniería en Sistemas Computacionales**  
 - Alumno: **Adrian Emiliano Medel Padilla**
 
 ## 2. Descripción del proyecto
 **Food Ninja (UberEatsCUDEC)** es una aplicación progresiva (PWA) que simula un sistema de pedidos de comida.  
 El problema que resuelve es la **gestión rápida y sencilla de platillos** en un entorno digital, permitiendo a los usuarios agregar, visualizar y administrar pedidos con fotos tomadas directamente desde la cámara trasera del dispositivo.  
-Sus usuarios principales son **estudiantes y desarrolladores** que buscan aprender sobre PWA, Firebase y manejo de cámara en aplicaciones web.  
+Sus usuarios principales son **estudiantes y clientes** que quieren un servicio rapido, eficiente, barato y eficaz de reparto de comida 
 El propósito es **facilitar el aprendizaje práctico** de tecnologías modernas aplicadas a un caso real de delivery.
 
 
@@ -34,7 +34,7 @@ Desarrollar una aplicación progresiva (PWA) que permita la gestión de platillo
 
 ### Objetivos específicos
 - Implementar un CRUD de platillos (crear, mostrar, actualizar, borrar).  
-- Integrar la cámara trasera del dispositivo para capturar fotos de los platillos.  
+- Integrar la cámara del dispositivo para capturar fotos de los platillos.  
 - Almacenar la información en **Firebase Firestore**.  
 - Diseñar una interfaz responsiva con **Materialize CSS**.  
 - Configurar la aplicación como **PWA** para instalación en dispositivos móviles.
@@ -42,7 +42,7 @@ Desarrollar una aplicación progresiva (PWA) que permita la gestión de platillo
 ## 4. Características principales
 - Interfaz responsiva con menús laterales.  
 - CRUD de platillos con foto.  
-- Captura de imágenes desde la cámara trasera.  
+- Captura de imágenes desde la cámara.  
 - Almacenamiento en Firebase Firestore.  
 - Secciones: Inicio, Acerca de, Pedidos, Contacto.  
 - Configuración como PWA (manifest.json, service worker).  
